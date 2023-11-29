@@ -145,17 +145,7 @@ The repo is to supplement the [youtube video](https://youtu.be/iGvj1gjbwl0) on I
     DELETE FROM nyc_taxi_iceberg_data_manipulation WHERE year(tpep_pickup_datetime) != 2008; 
     ```
 
-## Creators
-
-**Johnny Chivers**
-
-- <https://github.com/johnny-chivers/>
-
 ## Useful Links
 
 - [youtube video](https://youtu.be/iGvj1gjbwl0) 
-- [website](https://www.johnnychivers.co.uk)
-- [buy me a coffee](https://www.buymeacoffee.com/johnnychivers)
-
-
-Enjoy :metal:
+- [Original Github](https://github.com/johnny-chivers/iceberg-athena-aws)
