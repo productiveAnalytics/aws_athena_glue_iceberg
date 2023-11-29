@@ -144,6 +144,19 @@ The repo is to supplement the [youtube video](https://youtu.be/iGvj1gjbwl0) on I
     ```
     DELETE FROM nyc_taxi_iceberg_data_manipulation WHERE year(tpep_pickup_datetime) != 2008; 
     ```
+12. Query the history and snapshots
+    ```
+    select
+        h.made_current_at,
+        s.operation,
+        h.snapshot_id,
+        h.is_current_ancestor,
+        s.summary['spark.app.id']
+    from dbt_glue_db.nyc_taxi_iceberg_data_manipulation.history h
+        join dbt_glue_db.nyc_taxi_iceberg_data_manipulation.snapshots s
+            on h.snapshot_id = s.snapshot_id
+    order by made_current_at
+    ```
 
 ## Useful Links
 
